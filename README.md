@@ -27,7 +27,7 @@ This is a Flutter implementation of the popular social deduction game "Undercove
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/jankoabel/undercover_game-task
-   cd undercover_game
+   cd undercover_game-task
    ```
 
 2. **Install dependencies**:

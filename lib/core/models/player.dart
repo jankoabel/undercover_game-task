@@ -1,31 +1,33 @@
+enum PlayerRole { citizen, undercover }
+
 class Player {
-  final String id;
   final String name;
-  final bool isUndercover;
+  final PlayerRole role;
   final String word;
   bool isEliminated;
-  int votesAgainst;
+  int votes;
 
   Player({
-    required this.id,
     required this.name,
-    required this.isUndercover,
+    required this.role,
     required this.word,
     this.isEliminated = false,
-    this.votesAgainst = 0,
+    this.votes = 0,
   });
 
   Player copyWith({
+    String? name,
+    PlayerRole? role,
+    String? word,
     bool? isEliminated,
-    int? votesAgainst,
+    int? votes,
   }) {
     return Player(
-      id: id,
-      name: name,
-      isUndercover: isUndercover,
-      word: word,
+      name: name ?? this.name,
+      role: role ?? this.role,
+      word: word ?? this.word,
       isEliminated: isEliminated ?? this.isEliminated,
-      votesAgainst: votesAgainst ?? this.votesAgainst,
+      votes: votes ?? this.votes,
     );
   }
 }
